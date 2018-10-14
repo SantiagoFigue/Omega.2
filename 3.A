@@ -1,0 +1,17 @@
+#include <stdio.h>
+int funcion (int n);
+int main(int argc, char *argv[]) {
+	int n;
+	scanf ("%d",&n);
+	funcion( n);
+	printf ("%d",funcion(n));
+	return 0;
+}
+
+int funcion(int n){
+	if (n<=5){
+		return 1;
+	}else{
+		return funcion(n-2)*5;
+	}
+}
